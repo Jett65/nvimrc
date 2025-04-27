@@ -47,11 +47,22 @@ return {
     -- Autotag
     { "windwp/nvim-ts-autotag" },
 
+    -- Git
     { "tpope/vim-fugitive" },
+
+    -- Undo Tree
+    {
+        "jiaoshijie/undotree",
+        dependencies = "nvim-lua/plenary.nvim",
+        config = true,
+        keys = { -- load the plugin only when using it's keybinding:
+            { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+        },
+    },
 
 
     -- In Development --
 
     -- autofill
-    {"jett65/autofill"}
+    { "jett65/autofill" },
 }

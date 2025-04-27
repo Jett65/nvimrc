@@ -21,7 +21,19 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 20
+-- scrolling
+vim.opt.scrolloff = 999
+-- vim.opt.cursorline = true
+--
+-- vim.api.nvim_create_augroup('CenterCursor', { clear = true })
+-- vim.api.nvim_create_autocmd('CursorMoved', {
+--   group = 'CenterCursor',
+--   pattern = '*',
+--   command = 'normal! zz',
+-- })
+
+--
+
 
 vim.opt.updatetime = 50
 
