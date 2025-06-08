@@ -29,17 +29,6 @@ lsp_zero.extend_lspconfig({
     capabilities = require('cmp_nvim_lsp').default_capabilities()
 })
 
--- lsp_zero.format_on_save({
---   format_opts = {
---     async = false,
---     timeout_ms = 10000,
---   },
---   servers = {
---     ['lua_ls'] = {'lua'},
---     ['biome'] = {'javascript', 'typescript'},
---   }
--- })
-
 require('mason').setup({})
 require('mason-lspconfig').setup({
     handlers = {
