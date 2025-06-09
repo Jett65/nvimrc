@@ -5,5 +5,11 @@ require("mason-lspconfig").setup({
 })
 
 local lspconfig = require("lspconfig")
+
+
+
 lspconfig.lua_ls.setup({})
+
 vim.diagnostic.config({ virtual_text = true })
+
+vim.keymap.set({"n", "v",}, "<leader>ca", vim.lsp.buf.code_action, {})
