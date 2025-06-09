@@ -19,16 +19,19 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" }
     },
 
-    -- LSP
-    -- { 'williamboman/mason.nvim' },
-    -- { 'williamboman/mason-lspconfig.nvim' },
-    -- { 'neovim/nvim-lspconfig' },
-    -- { 'hrsh7th/cmp-nvim-lsp' },
-    -- { 'hrsh7th/nvim-cmp' },
 
+	-- Lsp
+	{
+		"neovim/nvim-lspconfig",
+		"mason-org/mason.nvim",
+		"mason-org/mason-lspconfig.nvim"
+	},
 
     -- Treesitter
-    { "nvim-treesitter/nvim-treesitter",  build = ":TSUpdate" },
+    {
+		"nvim-treesitter/nvim-treesitter",  build = ":TSUpdate",
+		"nvim-telescope/telescope-ui-select.nvim"
+	},
 
     -- Lualine
     {
