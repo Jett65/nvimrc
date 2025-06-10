@@ -1,4 +1,3 @@
 return {
-	{ "Rigellute/rigel" }
+	{ "Rigellute/rigel" },
 }
-
