@@ -1,6 +1,6 @@
 -- This Plugin is under development
 return {
-    {
-        "jett65/autofill"
-    }
+	{
+		"jett65/autofill",
+	},
 }
