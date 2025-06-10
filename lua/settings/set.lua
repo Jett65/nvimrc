@@ -18,7 +18,6 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
-
 vim.opt.termguicolors = true
 
 -- scrolling
@@ -34,6 +33,22 @@ vim.opt.scrolloff = 999
 
 --
 
+-- Diagnostics --
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "✘",
+            [vim.diagnostic.severity.WARN]  = "▲",
+            [vim.diagnostic.severity.INFO]  = "⚑",
+            [vim.diagnostic.severity.HINT]  = "»",
+        }
+    },
+    underline = false,
+    update_in_insert = true,
+})
+vim.opt.signcolumn = "yes"
+--
 
 vim.opt.updatetime = 50
 
