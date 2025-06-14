@@ -39,15 +39,28 @@ vim.diagnostic.config({
     signs = {
         text = {
             [vim.diagnostic.severity.ERROR] = "✘",
-            [vim.diagnostic.severity.WARN]  = "▲",
-            [vim.diagnostic.severity.INFO]  = "⚑",
-            [vim.diagnostic.severity.HINT]  = "»",
-        }
+            [vim.diagnostic.severity.WARN] = "▲",
+            [vim.diagnostic.severity.INFO] = "⚑",
+            [vim.diagnostic.severity.HINT] = "»",
+        },
     },
     underline = false,
     update_in_insert = true,
 })
+
 vim.opt.signcolumn = "yes"
+vim.keymap.set({ "n" }, "gl", vim.diagnostic.open_float, {})
+
+vim.diagnostic.config({
+    severity_sort = true,
+    float = {
+        style = "minimal",
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+    },
+})
 --
 
 vim.opt.updatetime = 50

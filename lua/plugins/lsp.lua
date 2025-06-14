@@ -31,13 +31,20 @@ return {
             local lspconfig = require("lspconfig")
 
             lspconfig.lua_ls.setup({
-                capabilities = capabilities
+                capabilities = capabilities,
             })
             lspconfig.clangd.setup({
-                capabilities = capabilities
+                capabilities = capabilities,
             })
 
+            vim.keymap.set({ "n" }, "<F2>", vim.lsp.buf.rename, {})
             vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+            vim.api.nvim_set_keymap(
+                "n",
+                "gd",
+                "<cmd>lua vim.lsp.buf.definition()<CR>",
+                { noremap = true, silent = true }
+            )
         end,
     },
 }
