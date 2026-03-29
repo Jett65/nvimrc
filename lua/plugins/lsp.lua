@@ -28,14 +28,15 @@ return {
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-            local lspconfig = require("lspconfig")
-
-            lspconfig.lua_ls.setup({
+            vim.lsp.config("lua_ls", {
                 capabilities = capabilities,
             })
-            lspconfig.clangd.setup({
+            vim.lsp.enable("lua_ls")
+            
+            vim.lsp.config("clangd", {
                 capabilities = capabilities,
             })
+            vim.lsp.enable("clangd")
 
             vim.keymap.set({ "n" }, "<F2>", vim.lsp.buf.rename, {})
             vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
