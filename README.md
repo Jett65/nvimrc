@@ -1,2 +1,2 @@
 # nvimrc
-My current neovim config as of 2025
+My current neovim config as of October 2026
